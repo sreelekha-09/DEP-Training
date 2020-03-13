@@ -2,13 +2,13 @@
 
 
 function createSecretHolder(secret) {
-var obj={
-    setSecret:function(n){
-    secret=n;
-    },
-    getSecret:function(){
-    return secret;
-    }
-};
-return obj;
+    var obj = {
+        setSecret: function (n) {
+            secret = n;
+        },
+        getSecret: function () {
+            return secret;
+        }
+    };
+    return obj;
 }
