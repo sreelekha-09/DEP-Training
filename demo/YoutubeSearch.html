@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Autour One' rel='stylesheet'>
+    <script src="Response.js"></script>
+    <script src="Request.js"></script>
+    <script src="Navigation.js"></script>
+        <script src="https://apis.google.com/js/client.js?onload=onClientLoad"></script>
+     <link rel="stylesheet" href="YoutubeSearch.css" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+
+    <template id="controls">
+        <main class="control">
+            <h1>Youtube Search</h1>
+            <br>
+        </main>
+        <div class=navigation>
+            <input type="search" name="search" id="query"/>
+            <input type="button" class="button" name="submit" value="submit" onclick="search()"/>
+            <input type="button" class="button" name="prev" value="prev" onclick="prev()"/>
+            <input type="button" class="button" name="next" value="next" onclick="next()"/>
+        </div>
+        
+        <div id="content"></div>
+    </template>
+  
+        <template id="videoTemplate">
+            <div class="card">
+                <img style="width:100%">
+                <div class="container">
+                  <h3></h3>
+                  <p id='channel'></p>
+                  <p></p>
+                </div>   
+        </template>
+       
+    
+</body>
+</html>
