@@ -3,7 +3,7 @@ var Cat = (function () {
     return function (catName, catWeight) {
         if (catName == undefined || catWeight == undefined) {
             throw new TypeError("undefined");
-    }
+        }
         Cat.catCount++;
         Cat.totalCatWeight += catWeight;
         this.name = catName;
