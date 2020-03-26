@@ -1,15 +1,13 @@
 //http://www.codewars.com/kata/transportation-on-vacation
 
 function rentalCarCost(d) {
-  // Your solution here
-  if(d>=7)
-  {
-  return (d*40)-50;
+  var cost = d * 40;
+  if (d >= 7) {
+    return (cost) - 50;
   }
-  else if(d>=3)
-  {
-  return (d*40)-20;
+  else if (d >= 3) {
+    return (cost) - 20;
   }
   else
-  return (d*40);
+    return (cost);
 }
