@@ -1,48 +1,21 @@
 //http://www.codewars.com/kata/array-helpers
 
 Array.prototype.square = function () {
-    var result = [];
-    for (let i = 0; i < this.length; i++) {
-        result[i] = this[i] * this[i];
-    }
-    return result;
+    return this.map(function (n) { return n * n; });
 };
 
 Array.prototype.cube = function () {
-    var result = [];
-    for (let i = 0; i < this.length; i++) {
-        result[i] = this[i] * this[i] * this[i];
-    }
-    return result;
+    return this.map(function (n) { return n * n * n; });
 };
 Array.prototype.sum = function () {
-    var result = 0;
-    for (let i = 0; i < this.length; i++) {
-        result += this[i];
-    }
-    return result;
+    return this.reduce(function (a, b) { return a + b; }, 0);
 };
 Array.prototype.even = function () {
-    var k = 0;
-    var result = [];
-    for (let i = 0; i < this.length; i++) {
-        if (this[i] % 2 == 0) {
-            result[k++] = this[i];
-        }
-    }
-    return result;
+    return this.filter(function (item) { return 0 == item % 2; });
 };
 Array.prototype.odd = function () {
-    var k = 0;
-    var result = [];
-    for (let i = 0; i < this.length; i++) {
-        if (this[i] % 2 != 0) {
-            result[k++] = this[i];
-        }
-    }
-    return result;
+    return this.filter(function (item) { return 0 != item % 2; });
 };
 Array.prototype.average = function () {
-    var sum = this.sum();
-    return (sum / this.length);
+    return this.sum() / this.length;
 }
